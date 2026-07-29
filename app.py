@@ -18,8 +18,8 @@ EQUIPMENT = [
     ("GC_1", "GC 1"),
     ("GC_2", "GC 2"),
     ("IC", "IC"),
-    ("LCMSMS_1", "LC-MS/MS 1"),
-    ("LCMSMS_2", "LC-MS/MS 2"),
+    ("LCMSMS_4500", "LC-MS/MS 4500"),
+    ("LCMSMS_5500", "LC-MS/MS 5500"),
 ]
 
 DOW_KR = ["월", "화", "수", "목", "금", "토", "일"]

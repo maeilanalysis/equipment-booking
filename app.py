@@ -169,8 +169,9 @@ for i, d in enumerate(week_dates):
 
 for equip_id, equip_name in EQUIPMENT:
     cols = st.columns([1.3] + [1] * 7)
-    cols[0].write(equip_name)
-
+    # 장비명을 굵게 표시 (수정됨)
+    cols[0].markdown(f"**{equip_name}**") 
+    
     for i, d in enumerate(week_dates):
         date_str = d.isoformat()
         key = f"{equip_id}|{date_str}"
@@ -183,11 +184,15 @@ for equip_id, equip_name in EQUIPMENT:
                     f"{b['start']}~{b['end']} {b['name']}</small>",
                     unsafe_allow_html=True
                 )
-
+            
             btn_key = f"btn_{equip_id}_{date_str}"
             if st.button("+ 예약", key=btn_key, use_container_width=True):
                 st.session_state.selected_cell = (equip_id, equip_name, d)
                 st.rerun()
+
+    # ★ 중요: 루프 안쪽, 가장 마지막 줄에 이 코드를 한 줄 추가합니다.
+    st.divider() 
+
 
 # ------------------------------------------------------------------
 # 예약 모달

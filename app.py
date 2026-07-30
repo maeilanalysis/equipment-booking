@@ -36,7 +36,7 @@ EQUIPMENT = [
     ("GC_1", "GC 1"),
     ("GC_2", "GC 2"),
     ("IC", "IC"),
-    ("LCMSMS_1", " LC-MS/MS 4500"),
+    ("LCMSMS_1", "LC-MS/MS 4500"),
     ("LCMSMS_2", "LC-MS/MS 5500"),
 ]
 

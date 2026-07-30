@@ -8,6 +8,24 @@ import datetime as dt
 # ------------------------------------------------------------------
 st.set_page_config(page_title="장비 예약 시스템", layout="wide")
 
+# --- 버튼 사이즈 조절 CSS 추가 ---
+st.markdown("""
+    <style>
+    div.stButton > button {
+        height: 26px !important;      /* 높이 축소 */
+        padding: 0px 8px !important;   /* 좌우 여백 축소 */
+        font-size: 12px !important;    /* 글자 크기 축소 */
+        min-height: unset !important;  /* 최소 높이 해제 */
+        line-height: 1 !important;     /* 행간 조절 */
+    }
+    /* 버튼 내부 텍스트 위치 보정 */
+    div.stButton > button p {
+        margin-bottom: 2px !important;
+        font-size: 12px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+# ------------------------------
 # ------------------------------------------------------------------
 # 장비 목록
 # ------------------------------------------------------------------
@@ -18,8 +36,8 @@ EQUIPMENT = [
     ("GC_1", "GC 1"),
     ("GC_2", "GC 2"),
     ("IC", "IC"),
-    ("LCMSMS_1", "LC-MS/MS 1"),
-    ("LCMSMS_2", "LC-MS/MS 2"),
+    ("LCMSMS_1", " LC-MS/MS 4500"),
+    ("LCMSMS_2", "LC-MS/MS 5500"),
 ]
 
 DOW_KR = ["월", "화", "수", "목", "금", "토", "일"]
